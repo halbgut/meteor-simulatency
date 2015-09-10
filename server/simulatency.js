@@ -25,5 +25,5 @@ streamServer.server._events.connection = function (socket) {
 
 // Add a simple connect handler, wich calls the next handler after a delay
 WebApp.rawConnectHandlers.use(function (req, res, next) {
-  return setTimeout(next, timeout)
+  return setTimeout(next, getCookie(req.headers.cookie, 'lag')[1] || timeout)
 })
