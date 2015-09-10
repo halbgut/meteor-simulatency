@@ -1,6 +1,6 @@
 global.simulatency = {}
 
-global.simulatency.timeout = 100
+global.simulatency.timeout = 0
 
 inject(Meteor.server.stream_server.server._events, 'connection', function (args, done) {
   inject(args[0], 'write', function (args, done) {
