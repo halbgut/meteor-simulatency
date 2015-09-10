@@ -14,5 +14,5 @@ Package.onUse(function (api) {
     'server/lib/utils.js'
   ], 'server')
   api.addFiles(['client/simulatency.js'], 'client')
-  api.export('setLag')
+  api.export('simulatency')
 })
