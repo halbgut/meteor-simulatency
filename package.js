@@ -10,8 +10,8 @@ Package.onUse(function (api) {
   api.versionsFrom('METEOR@1.1.0.3')
   api.use(['ddp', 'webapp'])
   api.addFiles([
-    'server/simulatency.js',
-    'server/lib/utils.js'
+    'server/lib/utils.js',
+    'server/simulatency.js'
   ], 'server')
   api.addFiles(['client/simulatency.js'], 'client')
   api.export('simulatency')
