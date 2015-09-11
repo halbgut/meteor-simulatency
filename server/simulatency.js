@@ -6,6 +6,9 @@ inject(Meteor.server.stream_server.server._events, 'connection', function (args,
   inject(args[0], 'write', function (args, done) {
     setTimeout(done, global.simulatency.timeout)
   })
+  inject(args[0], 'data', function (args, done) {
+    setTimeout(done, global.simulatency.timeout)
+  })
   done()
 })
 
