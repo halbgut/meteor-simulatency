@@ -22,9 +22,6 @@ Package.onUse(function (api) {
   ], 'server')
   api.addFiles([
     'client/simulatency.js',
-    'client/lagPicker/lagPicker.css',
-    'client/lagPicker/lagPicker.html',
-    'client/lagPicker/lagPicker.js'
   ], 'client')
   api.export('simulatency')
 })
