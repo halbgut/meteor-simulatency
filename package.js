@@ -7,12 +7,24 @@ Package.describe({
 })
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@1.1.0.3')
-  api.use(['ddp', 'webapp'])
+  api.versionsFrom('METEOR@1.2')
+  api.use([
+    'ecmascript',
+    'ddp',
+    'webapp',
+    'underscore',
+    'templating',
+    'spacebars'
+  ])
   api.addFiles([
     'server/lib/utils.js',
     'server/simulatency.js'
   ], 'server')
-  api.addFiles(['client/simulatency.js'], 'client')
+  api.addFiles([
+    'client/simulatency.js',
+    'client/lagPicker/lagPicker.css',
+    'client/lagPicker/lagPicker.html',
+    'client/lagPicker/lagPicker.js'
+  ], 'client')
   api.export('simulatency')
 })
